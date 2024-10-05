@@ -1,0 +1,29 @@
+type token =
+    SUB
+  | SETLABEL
+  | RSQUARE
+  | RET
+  | PRINT
+  | MUL
+  | MOVE
+  | LSQUARE
+  | LOCAL of int
+  | JNE
+  | INT of int
+  | GOTO
+  | GLOBAL of int
+  | FUN
+  | FLOAT of float
+  | EOF
+  | COMMA
+  | COLON
+  | CALL
+  | ATOM of string
+  | ADD
+val menhir_begin_marker : int
+val xv_reg : Common.reg_ref
+val xv_prog : Ast.t list option
+val xv_op : Ast.t
+val xv_list_form_ : Ast.t list
+val xv_form : Ast.t
+val menhir_end_marker : int

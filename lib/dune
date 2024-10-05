@@ -1,0 +1,10 @@
+(menhir
+ (modules parser))
+
+(ocamllex lexer)
+
+(library
+ (name mlisprun)
+ (libraries core mlisp)
+ (preprocess
+  (pps ppx_deriving.make ppx_deriving.show ppx_let ppx_deriving.eq)))
